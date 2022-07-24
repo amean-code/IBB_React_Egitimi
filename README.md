@@ -7,4 +7,4 @@ https://docs.google.com/presentation/d/1Ms9W8fNXCAn_8ta1xuKx8Rad0Y5tNTxqhT1lds-8
 ## Ders 2 İçerikleri
 https://docs.google.com/presentation/d/1aO9OGG11kCPWgY2AD7j2icRo5M4wIVnEVRatUP4ZcAs/edit#slide=id.g13e7f7f0850_0_978
 ## Ders 3 İçerikleri
-https://drive.google.com/drive/folders/1lO_wuELgCzQDYS6bdWdV4oW-ojjQkzPZ
+https://docs.google.com/presentation/d/18DOVzqjVvcQZVth3J97SECRGKVi77R2b2NZEYGjTmqQ/edit#slide=id.g13e7f7f0850_0_0
