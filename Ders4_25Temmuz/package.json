@@ -1,0 +1,17 @@
+{
+  "name": "ibbreactders4",
+  "version": "1.0.0",
+  "description": "IBB React Eğitimleri Ders 4 JavaScript Server Side",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "REACT",
+    "Eğitimi",
+    "IBB"
+  ],
+  "author": "eminkartci",
+  "license": "ISC"
+}
