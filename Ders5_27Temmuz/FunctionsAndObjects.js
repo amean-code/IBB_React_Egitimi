@@ -83,7 +83,7 @@ function yolGit(yakitMik , tuketim , yakitBirimFiyat , gidilecekYol) {
 
 // JSON Obje Çalışmaları
 
-const kullanici = {
+const kullanici1 = {
     kullaniciID: 1,
     kullaniciadi: "amean",
     sifre: "ibbreact",
@@ -102,6 +102,61 @@ const kullanici = {
     }
 }
 
-kullanici.kendiniTanit();
-kullanici.girisYap("ercan","123");
-kullanici.girisYap("amean","ibbreact");
+const kullanici2 = {
+    kullaniciID: 1,
+    kullaniciadi: "amean",
+    sifre: "ibbreact",
+    girisYap: function (kullaniciadi,sifre) {
+        if(kullaniciadi == kullanici.kullaniciadi && sifre == kullanici.sifre){
+            console.log("Giris Basarili!");
+            return;
+        }
+        console.log("Giris Basarisiz! Tekrar Deneyin!");
+    },
+    kendiniTanit: () => {
+        console.log(`
+            ID: ${kullanici.kullaniciID}
+            Kullanici Adi: ${kullanici.kullaniciadi}
+        `);
+    }
+}
+
+// kullanici.kendiniTanit();
+// kullanici.girisYap("ercan","123");
+// kullanici.girisYap("amean","ibbreact");
+
+class Kullanici{
+
+    // Constructor
+    constructor(id,kullaniciadi,sifre){
+        this.id = id;
+        this.kullaniciadi = kullaniciadi;
+        this.sifre = sifre;
+    }
+
+    girisYap(kullaniciadi,sifre) {
+        if(kullaniciadi == this.kullaniciadi && sifre == this.sifre){
+            console.log("Giris Basarili!");
+            return;
+        }
+        console.log("Giris Basarisiz! Tekrar Deneyin!");
+    }
+
+    kendiniTanit() {
+        console.log(`
+            ID: ${this.id}
+            Kullanici Adi: ${this.kullaniciadi}
+        `);
+    }
+
+}
+
+
+let kullaniciClass1 = new Kullanici(1,"amean","ibbreact");
+let kullaniciClass2 = new Kullanici(2,"ercan","ercan123");
+
+let kullanicilar = [ kullaniciClass1 , kullaniciClass2];
+
+kullanicilar.forEach(el => {
+    el.kendiniTanit();
+});
