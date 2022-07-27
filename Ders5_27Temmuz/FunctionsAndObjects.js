@@ -9,7 +9,7 @@ console.log("Arrayde 4 kisi bulunmaktadir.") // Bu statik bir yapidir KULLANMIYO
 isimler.push("Kagan");
 
 // Arrayde Kac Kisi oldugunu ekrana yazdiralim
-console.log(`Arrayde ${isimler.length} kisi bulunmaktadir.`) // Dinamik Yapi
+// console.log(`Arrayde ${isimler.length} kisi bulunmaktadir.`) // Dinamik Yapi
 
 // LOOP
 
@@ -24,7 +24,7 @@ let whileKosulu = whileIndex < isimler.length;
 
 while(whileKosulu){
 
-    console.log(`Merhaba ${isimler[whileIndex]}`);
+    //console.log(`Merhaba ${isimler[whileIndex]}`);
 
 
     // whileda yapilacak islemlerin sonu
@@ -65,7 +65,7 @@ function yolGit(yakitMik , tuketim , yakitBirimFiyat , gidilecekYol) {
             Toplam Maliyet: ${toplamMaliyet} TRY
             Kalan Yakit: 0 Litre
         `);
-        
+
     }else{ // Yeterli Yakit Varsa
 
         let toplamMaliyet = tuketim * yakitBirimFiyat// TRY
@@ -77,6 +77,31 @@ function yolGit(yakitMik , tuketim , yakitBirimFiyat , gidilecekYol) {
     } 
 }
 
-yolGit(100,10,25,1400);
-yolGit(40,20,10.15,400);
-yolGit(50,35,30,700);
+// yolGit(100,10,25,1400);
+// yolGit(40,20,10.15,400);
+// yolGit(50,35,30,700);
+
+// JSON Obje Çalışmaları
+
+const kullanici = {
+    kullaniciID: 1,
+    kullaniciadi: "amean",
+    sifre: "ibbreact",
+    girisYap: function (kullaniciadi,sifre) {
+        if(kullaniciadi == kullanici.kullaniciadi && sifre == kullanici.sifre){
+            console.log("Giris Basarili!");
+            return;
+        }
+        console.log("Giris Basarisiz! Tekrar Deneyin!");
+    },
+    kendiniTanit: () => {
+        console.log(`
+            ID: ${kullanici.kullaniciID}
+            Kullanici Adi: ${kullanici.kullaniciadi}
+        `);
+    }
+}
+
+kullanici.kendiniTanit();
+kullanici.girisYap("ercan","123");
+kullanici.girisYap("amean","ibbreact");
