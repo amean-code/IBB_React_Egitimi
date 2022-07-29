@@ -134,6 +134,7 @@ class Kullanici{
         this.sifre = sifre;
     }
 
+    // Behavior
     girisYap(kullaniciadi,sifre) {
         if(kullaniciadi == this.kullaniciadi && sifre == this.sifre){
             console.log("Giris Basarili!");
