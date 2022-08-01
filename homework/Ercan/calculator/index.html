@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Abstract" content="Calculator">
+    <meta name="Author" content="Ercan ÇİMEN">
+    <meta name="description" content="calculator">
+    <meta name="keywords" content="calculator">
+    <title>Calculator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calculator">
+            <div class="result">
+                <div class="inputMain">
+                    <div id="input1"></div>
+                    <div id="input2"></div>
+                </div>
+                <input type="text" onblur="this.focus()" autofocus onkeypress="return onlyNumberInput(event)" onpaste="return false" id="result">
+            </div>
+
+            <div class="operator">
+                <div class="addition" onclick="addition()">&#43;</div>
+                <div class="subtraction" onclick="subtraction()">&#8211;</div>
+                <div class="multiplication" onclick="multiplication()">&#215;</div>
+                <div class="division" onclick="division()">&#247;</div>
+            </div>
+            <div class="main">
+                <div class="number">
+                    <div onclick="clearResult()">C</div>
+                </div>
+                <div class="equal" onclick="equal()">=</div> 
+            </div>   
+
+        </div>
+    </div>
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
