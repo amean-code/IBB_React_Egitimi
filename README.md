@@ -1,6 +1,8 @@
 # IBB_React_Egitimi
 İstanbul Büyük Şehir Belediyesi - React &amp; Next.js &amp; PostgreSQL Eğitim İçeriklerine bu repository üzerinden erişebilirsiniz.
 
+## Odev Link
+https://drive.google.com/drive/u/0/folders/1ZdAaqqneRES96MClE7Qf3RHB2h4ZwXx0
 
 ## React Eğitimi 1 - Giriş |18 Temmuz İçeikleri
 https://docs.google.com/presentation/d/1Ms9W8fNXCAn_8ta1xuKx8Rad0Y5tNTxqhT1lds-8JYY/edit
