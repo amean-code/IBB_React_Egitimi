@@ -1,11 +1,16 @@
+
+// HTML Taglerini Al
 let input1 = document.getElementById('input1');
 let input2 = document.getElementById('input2');
 let result = document.getElementById('result');
 let createAppendChild = document.getElementsByClassName('number')[0];
-let numberArray = [9,8,7,6,5,4,3,2,1,0,'.'];
+
+// Sabitler
+const NUMBER_ARRAY = [9,8,7,6,5,4,3,2,1,0,'.'];
 
 // number input only
 let onlyNumberInput = (entry) => {
+    // result degişkeni bu dosya için global olarak tanımlanmıştır
     let key = entry.keyCode;
     if(result.value == '' && key == 46) {
         result.value = '0'
@@ -28,7 +33,7 @@ let createElementDiv = (parentDiv, arr) => {
         parentDiv.appendChild(createNumberDiv);
         parentDiv.insertBefore(createNumberDiv, createAppendChild.children[i]);
         createNumberDiv.onclick = (event) => {
-            if(result.value.includes('.') && event.target.innerHTML == '.') {
+            if(result.value.includes('.') && event.target.innerHTML == '.') {// iki kere nokta yazılmasını engelliyor
                 return result.value
             } else {
                 result.value += event.target.innerHTML;
@@ -36,9 +41,6 @@ let createElementDiv = (parentDiv, arr) => {
         };
     }  
   }
-    
-  createElementDiv(createAppendChild, numberArray);
-
 
 // calculation functions
 let addition = () => {
@@ -118,8 +120,6 @@ let keyboard = (event) => {
     }
 }
 
-document.addEventListener("keydown", keyboard, false);
-
 // using click equal
 let equal = () => {
     if(input2.value == 'addition') {
@@ -135,6 +135,10 @@ let equal = () => {
     resultCalculator();
 }
 
+// MAIN
+createElementDiv(createAppendChild, NUMBER_ARRAY);
+
+document.addEventListener("keydown", keyboard, false);
 
 
 
