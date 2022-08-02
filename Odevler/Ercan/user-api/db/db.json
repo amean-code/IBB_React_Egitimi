@@ -1,0 +1,36 @@
+{
+    "userArray" :[
+        {
+            "user_id":1, 
+            "firstName":"Ercan", 
+            "lastName":"ÇİMEN", 
+            "userName":"ercan",
+            "password":"123",
+            "authorization":"admin"
+        },
+        {
+            "user_id":2, 
+            "firstName":"Emin", 
+            "lastName":"KARTÇI", 
+            "userName":"emin",
+            "password":"111",
+            "authorization":"admin"
+        },
+        {
+            "user_id":3, 
+            "firstName":"İrem", 
+            "lastName":"ERTEN", 
+            "userName":"irem",
+            "password":"222",
+            "authorization":"guest"
+        },
+        {
+            "user_id":4, 
+            "firstName":"Ecem Nur", 
+            "lastName":"ŞENER", 
+            "userName":"ecem",
+            "password":"333",
+            "authorization":"test"
+        }
+    ]
+}
