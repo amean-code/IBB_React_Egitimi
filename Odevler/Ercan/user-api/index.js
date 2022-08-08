@@ -14,6 +14,26 @@ const userRoutes = require('./routes/user');
 // Router using
 app.use(userRoutes);
 
+// End pointler hakkında bilgilendirme yapalım
+app.get("/" , (req, res) => {
+
+
+    res.send(`
+    
+    <h1> Kullanıcı API Hoşgeldiniz </h1>
+
+    <p> Aşağıdaki dizinkeri kullanarak kullanıcı bilgilerine ulaşabilirsiniz. </p>
+
+    <ul>
+
+        <li> /kullanici/hepsi </li>
+        <li> /kullanici/:kullanici_id</li>
+        <li> /kullanici/auth/:rol</li>
+    </ul>
+
+    `);
+})
+
 
 // App Listen - Port
 app.listen( port, () => {

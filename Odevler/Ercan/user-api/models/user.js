@@ -2,7 +2,7 @@
 let db = require('../db/db.json');
 
 // User behaviours class
-class User {
+module.exports = class User {
 
     // All users
     async userAll() {
@@ -39,6 +39,3 @@ class User {
     }
 
 }
-
-// User behaviours class export
-module.exports = new User();

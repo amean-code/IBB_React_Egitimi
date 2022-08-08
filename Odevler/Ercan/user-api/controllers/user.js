@@ -1,5 +1,8 @@
 // Import user behaviours
-const user = require('../models/user');
+const User = require('../models/user');
+
+
+const user = new User();
 
 // Controllers all users
 exports.userAllControllers = async (request, response) => {
