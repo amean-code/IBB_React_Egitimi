@@ -1,8 +1,11 @@
-const express = require('express');
-var app = express();
+import Express  from 'express';
+import  Kullanici, { testKullaniciArr } from './models/Kullanici.js';
+
+var app = Express();
 
 // CONST
 const PORT = process.env.PORT || 3001;
+const TEST_KULLANICI_ARR = testKullaniciArr;
 
 // GET
 app.get("/", (req,res) => {
@@ -10,16 +13,35 @@ app.get("/", (req,res) => {
 }) 
 
 app.get("/kullanici/hepsi", (req,res) => {
+
+    res.send(TEST_KULLANICI_ARR);
     
 }) 
 
-app.get("/kullanici/:kullanici_id", (req,res) => {
+app.get("/kullanici/rol/:rol", (req,res) => {
     
+    let secilenRol = req.params.rol;
+
+    let secilenKullanici = TEST_KULLANICI_ARR.find((kullanici) => {
+        return kullanici.rol === secilenRol;
+    });
+
+    res.send(secilenKullanici);
+
 }) 
 
-app.get("/kullanici/:rol", (req,res) => {
-    
+app.get("/kullanici/id/:kullanici_id", (req,res) => {
+
+    let secilenKullaniciID = req.params.kullanici_id;
+
+    let secilenKullanici = TEST_KULLANICI_ARR.find((kullanici) => {
+        return kullanici.id == secilenKullaniciID;
+    });
+
+    res.send(secilenKullanici);
 }) 
+
+
 
 // POST
 
