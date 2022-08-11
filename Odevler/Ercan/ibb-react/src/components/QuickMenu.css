@@ -1,0 +1,43 @@
+/* quick-menu START */
+.quick-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #1cafd9;
+    width: 100%;
+    height: 500px;
+  }
+  
+  .section-title {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+  }
+  
+  .quick-menu-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .quick-menu-item {
+    width: 33%;
+    text-align: center;
+  }
+  
+  .quick-menu-item img {
+    cursor: pointer;
+  }
+  
+  .quick-menu-title {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .quick-menu-title p{
+    padding: 0;
+    margin: 0;
+  }
+  /* quick-menu END */
+  

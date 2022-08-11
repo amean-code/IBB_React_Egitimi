@@ -1,4 +1,5 @@
 import React from "react";
+import "./QuickMenu.css"
 
 class QuickMenu extends React.Component {
   render() {

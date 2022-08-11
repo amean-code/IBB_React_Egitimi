@@ -1,0 +1,48 @@
+/* Header + Navbar START */
+.header-nav {
+    padding: 24px 32px;
+    background-color: #0e3b83;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* Header + Navbar END */
+  
+  /* Navbar START*/
+  .navigation {
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    width: 900px;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .navigation-menu-item {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+  }
+  
+  .dropdown-icon {
+    transform: rotate(225deg);
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+  }
+  /* Navbar END*/
