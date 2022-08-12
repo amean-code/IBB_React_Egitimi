@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Header.css"
-import ibb_logo from '../assets/main-logo-light.png'
+import ibb_logo from '../../assets/main-logo-light.png'
 
 function Header() {
   return (
