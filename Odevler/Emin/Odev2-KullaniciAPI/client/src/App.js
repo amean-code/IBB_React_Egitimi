@@ -1,13 +1,16 @@
 import './App.css';
-import User from './components/User';
+import Giris from './components/Giris';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
   return (
     <div className="App">
-      Kullanıcı API
+      
+      <Giris />
 
-      <User />
+      
+
     </div>
   );
 }
