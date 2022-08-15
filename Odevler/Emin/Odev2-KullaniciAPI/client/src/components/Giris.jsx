@@ -1,17 +1,36 @@
-import React ,{useState}from "react";
+import React, { useState } from "react";
 import styles from "./Giris.module.css";
+import styled from "styled-components";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import "animate.css";
+import IBBFormClaimer from "./IBBFormClaimer";
 
-function Giris() {
+function Giris(props) {
+  const [email, setEmail] = useState("");
+  const [sifre, setSifre] = useState("");
+  const [beniHatirla, setBeniHatirla] = useState(false);
 
-    const [email, setEmail] = useState("");
-    const [sifre, setSifre] = useState("");
-    const [beniHatirla, setBeniHatirla] = useState(false);
+  // Create a Title component that'll render an <h1> tag with some styles
+  const Title = styled.h1`
+    font-size: 1.5em;
+    text-align: center;
+    color: palevioletred;
+  `;
+
+  // Create a Wrapper component that'll render a <section> tag with some styles
+  const Wrapper = styled.section`
+    padding: 4em;
+    background: papayawhip;
+  `;
 
   return (
     <div className={styles.authWrapper}>
-      <div className={styles.authHeader}>IBB React Uygulaması</div>
+      <div className={`${styles.authHeader} animate__animated animate__fadeIn`}>
+        {props.baslik || "IBB REACT EGITIMI"}
+      </div>
 
-      <div className={styles.authInner}>
+      <div className={`${styles.authInner} animate__animated animate__fadeIn`}>
         <form>
           <div className="mb-3">
             <label htmlFor="giris_email"> Kullanıcı Adı</label>
@@ -22,7 +41,7 @@ function Giris() {
               id="giris_email"
               value={email}
               onChange={(e) => {
-                setEmail(e.target.value)
+                setEmail(e.target.value);
               }}
             />
           </div>
@@ -36,7 +55,7 @@ function Giris() {
               id="giris_sifre"
               value={sifre}
               onChange={(e) => {
-                setSifre(e.target.value)
+                setSifre(e.target.value);
               }}
             />
           </div>
@@ -48,8 +67,8 @@ function Giris() {
                 className="custom-control-input pr-2"
                 style={{ margin: "10px" }}
                 id="giris_beniHatirla"
-                onChange={(e) =>{
-                    setBeniHatirla(!beniHatirla);
+                onChange={(e) => {
+                  setBeniHatirla(!beniHatirla);
                 }}
               />
               <label
@@ -67,16 +86,7 @@ function Giris() {
             </button>
           </div>
 
-          <div className="mt-4">
-            <p className="forgot-password text-right">
-                <a href="#">Kayıt Ol</a> veya <a href="#">Şifremi Unuttum</a>
-            </p>
-
-            <hr/>
-
-            <p className="forgot-password text-right small">@2022 Tüm hakları Saklıdır | AMEAN DANIŞMANLIK</p>
-          </div>
-
+          <IBBFormClaimer yil="2018" sirket="IBB"/>
         </form>
       </div>
     </div>
