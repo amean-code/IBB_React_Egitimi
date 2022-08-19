@@ -1,46 +1,94 @@
-import React from 'react'
-import "./SignIn.css"
+import React, { useState } from "react";
+import styled from "styled-components";
+import IBBFormClaimer from "../Claimer/IBBFormClaimer";
+import styles from "./SignIn.module.css";
 
-function SignIn() {
-    return (
-        <div className="container">
-          <form className="form">
-            <h2 className="header">IBB React Eğitimi</h2>
-            <div className="form-group">
-              <label htmlFor="email">E-Mail</label>
+function SignIn(props) {
+  // State Variables
+  const [email,setEmail] = useState();
+  const [password,setPassword] = useState();
+  const [rememberMe,setRememberMe] = useState();
+
+  // Create a Title component that'll render an <h1> tag with some styles
+  const Title = styled.h1`
+    font-size: 1.5em;
+    text-align: center;
+    color: palevioletred;
+  `;
+
+  // Create a Wrapper component that'll render a <section> tag with some styles
+  const Wrapper = styled.section`
+    padding: 4em;
+    background: papayawhip;
+  `;
+
+  return (
+    <div className={styles.authWrapper}>
+      <div className={`${styles.authHeader} animate__animated animate__fadeIn`}>
+        {props.baslik || "IBB REACT EGITIMI"}
+      </div>
+
+      <div className={`${styles.authInner} animate__animated animate__fadeIn`}>
+        <form>
+          <div className="mb-3">
+            <label htmlFor="giris_email"> Kullanıcı Adı</label>
+            <input
+              type="email"
+              placeholder="E-Mail"
+              className="form-control mt-2"
+              id="giris_email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value)
+              }}
+            />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="giris_sifre"> Şifre</label>
+            <input
+              type="password"
+              placeholder="****"
+              className="form-control mt-2"
+              id="giris_sifre"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value)
+              }}
+            />
+          </div>
+
+          <div className="mb-3">
+            <div className="custom-control custom-checkbox">
               <input
-                type="text"
-                name="mail"
-                placeholder="isminiz.soyisminiz@ibb.gov.tr"
+                type="checkbox"
+                className="custom-control-input pr-2"
+                style={{ margin: "10px" }}
+                id="giris_beniHatirla"
+                onChange={(e) => {
+                  setRememberMe(e.target.value)
+                }}
               />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Şifre</label>
-              <input type="text" name="password" placeholder="Şifreniz" />
-            </div>
-            <div className="form-group-check">
-              <input type="checkbox" name="remember" className="form-check-input" />
-              <label htmlFor="remember">Beni Hatırla</label>
-            </div>
-            <div className="form-group-check">
-              <input type="checkbox" name="check" className="form-check-input" />
-              <label htmlFor="check">
-                Kullanıcı sözleşmesini okudum ve onaylıyorum.
+              <label
+                className="custom-control-label"
+                htmlFor="giris_beniHatirla"
+              >
+                Beni Hatırla
               </label>
             </div>
-            <button type="submit" className="submit" disabled>
-              Submit
+          </div>
+
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">
+              Giriş Yap
             </button>
-            <div className="forget">
-              <a href="#">Şifremi Unuttum</a>
-    
-              <span> veya </span>
-    
-              <a href="#">Kayıt Ol</a>
-            </div>
-          </form>
-        </div>
-      );
+          </div>
+
+          <IBBFormClaimer yil="2022" sirket="IBB & AMEAN Danışmanlık"/>
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default SignIn
+export default SignIn;
