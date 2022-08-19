@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import IBBFormClaimer from "../Claimer/IBBFormClaimer";
 import styles from "./SignIn.module.css";
+import axios from "axios";
 
 function SignIn(props) {
   // State Variables
@@ -22,11 +23,32 @@ function SignIn(props) {
     background: papayawhip;
   `;
 
+  const girisYap =  (e) => {
+    e.preventDefault();
+    console.log(`Giriş Yap Fonksyionu Çalışıyor`);
+
+    const user = {
+      email: email,
+      password: password
+    }
+    axios('http://localhost:3002/api/auth/signin',user)
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
+  }
+
   return (
     <div className={styles.authWrapper}>
       <div className={`${styles.authHeader} animate__animated animate__fadeIn`}>
-        {props.baslik || "IBB REACT EGITIMI"}
+        {props.baslik || "IBB REACT EGITIMI"}       
       </div>
+
+      <p>EMAIL : {email} </p>
+        <p> SIFRE : {password} </p>
 
       <div className={`${styles.authInner} animate__animated animate__fadeIn`}>
         <form>
@@ -79,7 +101,7 @@ function SignIn(props) {
           </div>
 
           <div className="d-grid">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary" onClick={girisYap}>
               Giriş Yap
             </button>
           </div>

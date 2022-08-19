@@ -6,9 +6,8 @@ const UserSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
-    sifre:{
+    password:{
         type: String,
-        unique: true,
         required: true
     },
     name: {
