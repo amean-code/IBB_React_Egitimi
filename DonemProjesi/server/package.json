@@ -1,0 +1,23 @@
+{
+  "name": "ibb-donem-sonu-server",
+  "version": "1.0.0",
+  "description": "IBB REACT Eğitimi Dönem sonu Projesi",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "keywords": [
+    "IBB",
+    "REACT Eğitimi"
+  ],
+  "author": "eminkartci,ercancimen,iremerten,ecemsener",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
