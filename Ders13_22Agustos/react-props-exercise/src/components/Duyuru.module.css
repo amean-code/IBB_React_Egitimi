@@ -1,0 +1,44 @@
+
+
+.container{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgba(160, 154, 154, 0.192);
+}
+
+.shadow{
+    box-shadow: 10px 10px 21px -9px rgba(128,109,109,0.6);
+    -webkit-box-shadow: 10px 10px 21px -9px rgba(128,109,109,0.6);
+    -moz-box-shadow: 10px 10px 21px -9px rgba(128,109,109,0.6);
+}
+
+.title{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 0px;
+}
+
+.duyuruImg{
+    width: 100%;
+}
+
+.duyuruAciklama{
+    color: gray;
+    font-size: small;
+    text-align: start;
+    overflow: auto;
+    padding: 0.25rem 0.5rem;
+}
+
+.duyuruTarih{
+    font-size: medium;
+    text-align: end;
+    margin: 0px;
+}
