@@ -1,18 +1,22 @@
 // Express Import
 const express = require('express');
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Converting post data to object
-const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 // Router functions import
 const userRoutes = require('./routes/user');
+const authRoutes = require('./routes/auth');
 
 // Router using
-app.use(userRoutes);
+app.use("/api/user",userRoutes);
+app.use("/api/auth",authRoutes);
 
 // End pointler hakkında bilgilendirme yapalım
 app.get("/" , (req, res) => {
@@ -36,6 +40,6 @@ app.get("/" , (req, res) => {
 
 
 // App Listen - Port
-app.listen( port, () => {
-    console.log(`Listen port: ${port} success`);
+app.listen( PORT, () => {
+    console.log(`Listen port: ${PORT} success`);
 })
