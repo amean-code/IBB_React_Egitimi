@@ -1,6 +1,6 @@
 import User from "../Models/User.js";
 
-export const signup = async (req, res) => {
+export const signup = async (req, res) => { // YENI KULLANICI
   try {
     // Body'den Kullanici Bilgilerini Cek
     const user = req.body;
@@ -27,7 +27,7 @@ export const signup = async (req, res) => {
   }
 };
 
-export const signin = async(req, res) => {
+export const signin = async(req, res) => { // GIRIS
     try {
         // Body'den Kullanici Bilgilerini Cek
         const user = req.body;
