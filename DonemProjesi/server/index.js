@@ -1,7 +1,9 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import authRouter from './routers/auth.js'
+import cookieParser from 'cookie-parser';
+import authRouter from './routers/auth.js';
+import userRouter from './routers/user.js';
 
 // APP
 const app = express();
@@ -9,6 +11,7 @@ const app = express();
 // USE
 dotenv.config()
 app.use(express.json())
+app.use(cookieParser())
 
 // CONSTANTS
 const PORT = process.env.PORT || 3044;
@@ -26,6 +29,7 @@ const mongo_connet = () => {
 
 // ROUTER
 app.use("/api/auth",authRouter)
+app.use("/api/user",userRouter)
 
 // ERROR
 
